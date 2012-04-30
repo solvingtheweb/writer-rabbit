@@ -1,0 +1,220 @@
+/*
+Theme Name: Twenty Ten
+Theme URI: http://wordpress.org/
+Description: The 2010 theme for WordPress is stylish, customizable, simple, and readable -- make it yours with a custom menu, header image, and background. Twenty Ten supports six widgetized areas (two in the sidebar, four in the footer) and featured images (thumbnails for gallery posts and custom header images for posts and pages). It includes stylesheets for print and the admin Visual Editor, special styles for posts in the "Asides" and "Gallery" categories, and has an optional one-column page template that removes the sidebar.
+Author: the WordPress team
+Version: 1.2
+License: GNU General Public License
+License URI: license.txt
+Tags: black, blue, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style, custom-menu
+*/
+
+
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+
+@charset "utf-8";
+/* CSS Document */
+
+/*====================================== reset.css is here ========================================*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { margin:0; padding:0;}
+table {	border-collapse:collapse; border-spacing:0;}
+fieldset,img { border:0; }
+address,caption,cite,code,dfn,em,strong,th,var {font-style:normal; font-weight:normal;}
+ol,ul { list-style:none;}
+caption,th {text-align:left;}
+h1,h2,h3,h4,h5,h6 {	font-size:100%;	font-weight:bold;}
+q:before,q:after {content:'';}
+abbr,acronym { border:0;}
+.clear_0{clear:both; font-size:0px;line-height:0px; display:block;}
+.last	{margin:0 !important;}
+.no_bg_pad{background:none !important; padding:0 !important;}
+.no_bg{ background:none !important;}
+.no_pad{ padding:0px !important;}
+.clear{clear:both;}
+.no_mar{ margin:0px !important;}
+/**************************************************************************************/
+
+body										{ background:#f5f6f6;}
+.top_bg										{ width:100%; height:10px; background:url(images/top_bg.jpg) no-repeat center top; margin:12px 0 0 0;}
+.repeat_bg									{ width:100%; background:url(images/repeat_bg.jpg) repeat-y center top;}
+.btm_bg										{ width:100%; height:11px; background:url(images/btm_bg.jpg) no-repeat center top;}
+.wrapper									{ width:960px; margin:0 auto;}
+
+/*----------header----------*/
+
+.header										{ width:960px; height:262px;}
+.top_menu									{ width:300px; float:left; margin:0 0 0 10px; background:url(images/header_btm_border.jpg) repeat-x left bottom; height:204px;}
+.top_menu ul								{ width:200px; float:left; display:block; padding:92px 0 0 80px;}
+.top_menu ul li								{ float:left; display:block; background:url(images/top_menu_divider.jpg) no-repeat right top; padding:0 40px 0 0;}
+.top_menu ul li a							{ font:bold 20px Georgia, "Times New Roman", Times, serif; color:#8c7065; text-decoration:none; display:block; padding:0 0 0px 0; border-bottom:5px solid #e8cec5;}
+.top_menu_last								{ padding:0 0 0 20px !important; background:none !important;}
+
+.logo										{ width:310px; float:left; padding:12px 18px 0 16px;}
+
+.logo_txt									{ width:300px; float:left; background:url(images/header_btm_border.jpg) repeat-x left bottom; height:204px;}
+.logo_txt h1								{ font:bold italic 20px Georgia, "Times New Roman", Times, serif; color:#ab968e; padding:80px 0 0 0;}
+
+/*----------content----------*/
+
+.content									{ width:960px; padding:0 0 40px 0;}
+.lft_content								{ width:700px; float:left; padding:0 0 0 10px;}
+.life_style									{ width:700px; border-top:7px solid #7597aa; padding:14px 0 15px 0; background:url(images/life_style_btm_border.jpg) repeat-x left bottom;}
+.life_style .img							{ display:block; float:left; display:block; padding:0 22px 12px 0;}
+.life_style h2								{ font:bold 14px/14px "Times New Roman", Times, serif; color:#8f8f8f; padding:0 0 4px 0;}
+.life_style h3								{ font:bold 22px/26px Georgia, "Times New Roman", Times, serif; color:#000000; padding:0 0 10px 0;}
+.life_style h6								{ height:22px; background:url(images/carrot_bg.jpg) no-repeat 438px top; padding:0px 5px 0 460px !important; text-align:left; 
+font:bold 16px Georgia, "Times New Roman", Times, serif; color:#75a1a9; float:none !important; display:block !important;}
+*+html .life_style h6						{ height:22px; background:url(images/carrot_bg.jpg) no-repeat left top; padding:0px 5px 0 20px !important; }
+.life_style p								{ font:14px/18px Georgia, "Times New Roman", Times, serif; color:#545454; padding:12px 0 10px 0;}
+.life_style h4								{ font:bold 18px/18px Georgia, "Times New Roman", Times, serif; color:#78402b; padding:18px 0 0px 0;}
+
+.share										{ width:700px; padding:0 0 30px 0; border-bottom:1px solid #e7e2e0;}
+.share h5									{ font:bold 15px Georgia, "Times New Roman", Times, serif; color:#5b5b5b; padding:20px 0 0 0;}
+.share ul									{ width:700px; float:left; display:block; padding:15px 0 0 0;}
+.share ul li								{ float:left; display:block; padding:0 20px 0 0;}
+.share ul li a								{ display:block;}
+
+.comment									{ width:700px; padding:0 0 30px 0; border-bottom:1px solid #e7e2e0;}
+.comment h5									{ font:bold 15px Georgia, "Times New Roman", Times, serif; color:#5b5b5b; padding:25px 0 20px 0;}
+.comment_post								{ width:700px; padding:0 0 12px 0;}
+.comment_post p								{ font:14px/18px Georgia, "Times New Roman", Times, serif; color:#545454; padding:8px;}
+.comment_post_top							{ width:686px; background:#efece8; padding:7px;}
+.comment_post_top span						{ float:left; display:block; padding:0 15px 0 0;}
+.comment_post_top h4						{ font:bold 12px/18px Georgia, "Times New Roman", Times, serif; color:#d35828; padding:2px 0 0 0;}
+.comment_post_top h4 a						{ color:#d35828; text-decoration:none; display:block;}
+.comment_post_top h4 a:hover				{ text-decoration:underline;}
+.comment_post_top h4 span					{ display:block; float:none; font:12px/18px Georgia, "Times New Roman", Times, serif; color:#8c8c8c;}
+.sub_post									{ width:630px; float:right;}
+.sub_post p									{ font:14px/18px Georgia, "Times New Roman", Times, serif; color:#545454; padding:8px;}
+.sub_post p	a								{ font:bold 14px/18px Georgia, "Times New Roman", Times, serif; color:#d35828; display:inline-block; text-decoration:none;}
+.sub_post p	a:hover							{ text-decoration:underline;}
+.sub_post_top								{ width:616px; background:#efece8; padding:7px;}
+.sub_post_top span							{ float:left; display:block; padding:0 15px 0 0;}
+.sub_post_top h4							{ font:bold 12px/18px Georgia, "Times New Roman", Times, serif; color:#d35828; padding:2px 0 0 0;}
+.sub_post_top h4 a							{ color:#d35828; text-decoration:none; display:block;}
+.sub_post_top h4 a:hover					{ text-decoration:underline;}
+.sub_post_top h4 span						{ display:block; float:none; font:12px/18px Georgia, "Times New Roman", Times, serif; color:#8c8c8c;}
+
+.leave_comm									{ width:700px;}
+.leave_comm h6								{ font:bold 15px Georgia, "Times New Roman", Times, serif; color:#5b5b5b; padding:30px 0 18px 0;}
+.leave_comm p								{ display:block; padding:0 0 10px 0;}
+.leave_comm p label							{ width:87px; float:left; display:block; font:bold 12px Georgia, "Times New Roman", Times, serif; color:#7597aa;}
+.leave_comm p label span					{ display:block;}
+.txtbox										{ width:195px; height:26px; background:none; border:1px solid #bebebe; outline:none; display:block; line-height:20px;}
+.txtarea									{ width:459px; height:172px; background:none; outline:none; border:1px solid #bebebe; overflow:auto;}
+.submit										{ width:111px; height:19px; background:url(images/submit_button.jpg) no-repeat; cursor:pointer; border:none; margin:0 0 0 85px;}
+
+.rht_content								{ width:220px; float:right; padding:0 10px 0 0;}
+.key_word									{ width:204px; background:#f5f5f5; padding:10px 8px;}
+.key_word span								{ width:189px; background:url(images/key_word.jpg) no-repeat; height:27px; display:block; padding:4px 5px 7px 10px;}
+.key_txt_box								{ width:125px; float:left; display:block; border:none; background:none; outline:none; font:14px/20px Georgia, "Times New Roman", Times, serif; color:#9e9e9e; 
+padding:5px 0 0 0;}
+.search_button								{ width:57px; height:27px; background:#d35828; border:none; cursor:pointer; font:14px Georgia, "Times New Roman", Times, serif; color:#fed8a7;}
+
+.quotes										{ width:220px; padding:20px 0 0 0;}
+.quotes h5									{ font:bold 15px Arial, Helvetica, sans-serif; color:#949494; text-transform:uppercase; border-bottom:5px solid #a1b08b;}
+.quotes p									{ font:15px/18px Georgia, "Times New Roman", Times, serif; color:#655843; padding:15px 10px 0 10px;}
+.quotes p span								{ display:block; float:right; padding:20px 0 0 0;}
+
+.prompt										{ width:220px; padding:45px 0 0 0;}
+.prompt h5									{ font:bold 15px Arial, Helvetica, sans-serif; color:#949494; text-transform:uppercase; border-bottom:5px solid #a1b08b;}
+.prompt p									{ font:15px/18px Georgia, "Times New Roman", Times, serif; color:#655843; padding:15px 10px 0 10px;}
+
+.tag_cloud									{ width:220px; padding:50px 0 0 0;}
+.tag_cloud h5								{ font:bold 15px Arial, Helvetica, sans-serif; color:#949494; text-transform:uppercase; border-bottom:5px solid #a1b08b;}
+.tag_cloud p								{ text-align:center; padding:15px 10px 0 10px;}
+.tag_cloud p a								{ text-decoration:none;}
+.font_1										{ font:italic 10px/20px Georgia, "Times New Roman", Times, serif; color:#dfa135;}
+.font_2										{ font:italic 12px/20px Georgia, "Times New Roman", Times, serif; color:#dfa135;}
+.font_3										{ font:italic 14px/20px Georgia, "Times New Roman", Times, serif; color:#dfa135;}
+.font_4										{ font:italic 16px/20px Georgia, "Times New Roman", Times, serif; color:#dfa135;}
+.font_5										{ font:italic 18px/20px Georgia, "Times New Roman", Times, serif; color:#dfa135;}
+.font_6										{ font:italic 20px/20px Georgia, "Times New Roman", Times, serif; color:#dfa135;}
+
+.links										{ width:220px; padding:40px 0 0 0;}
+.links h5									{ font:bold 15px Arial, Helvetica, sans-serif; color:#949494; text-transform:uppercase; border-bottom:5px solid #a1b08b;}
+.links ul									{ width:220px; float:left; display:block; padding:16px 0 0 0;}
+.links ul li								{ display:block; background:url(images/links_bullet.jpg) no-repeat left 4px; padding:0 0 4px 13px;}
+.links ul li a								{ font:14px/18px Georgia, "Times New Roman", Times, serif; color:#d35828; text-decoration:none; display:block;}
+.links ul li a:hover						{ text-decoration:underline;}
+
+
+/*----------footer----------*/
+
+.footer										{ width:940px; margin:0 0 0 10px; background:url(images/header_btm_border.jpg) repeat-x left top;}
+.footer p									{ font:bold 16px Georgia, "Times New Roman", Times, serif; color:#7597aa; text-align:center; padding:15px 0 25px 0;}
+
+
+/*----------inner styling----------*/
+
+.post_top									{ width:700px; padding:0 0 50px 0;}
+.inner_post_lft								{ width:340px; float:left; border-top:7px solid #7597aa;}
+.inner_post_lft h6							{ font:bold 22px Georgia, "Times New Roman", Times, serif; color:#000000; padding:10px 0 14px 0;}
+.inner_post_lft h6 span						{ height:22px; background:url(images/carrot_bg.jpg) no-repeat left top; width:40px; text-align:right; font:bold 16px Georgia, "Times New Roman", Times, serif; color:#75a1a9; display:inline-block; padding:0 15px 0 0;}
+.inner_post_lft img							{ float:left; display:block; padding:0 15px 0 0;}
+.inner_post_lft p							{ font:14px/18px Georgia, "Times New Roman", Times, serif; color:#545454; padding:0 0 20px 0;}
+.inner_post_lft p a							{ font:14px/18px Georgia, "Times New Roman", Times, serif; color:#d35828; text-decoration:none; display:inline-block;}
+.inner_post_lft p a:hover					{ text-decoration:underline;}
+.posted_in									{ width:340px; background:url(images/posted_in_bg.jpg) repeat-x left top; padding:14px 0 0 0;}
+.posted_in p								{ font:13px Georgia, "Times New Roman", Times, serif; color:#858585;}
+.posted_in p a								{ font:13px Georgia, "Times New Roman", Times, serif; color:#dfa135 !important; text-decoration:none; display:inline-block;}
+.posted_in p a:hover						{ text-decoration:underline;}
+
+.inner_post_rht								{ width:340px; float:right; border-top:7px solid #7597aa;}
+.inner_post_rht h6							{ font:bold 22px Georgia, "Times New Roman", Times, serif; color:#000000; padding:10px 0 14px 0;}
+.inner_post_rht img							{ display:block; border:1px solid #e7e5e5;}
+.inner_post_rht p							{ font:14px/18px Georgia, "Times New Roman", Times, serif; color:#545454; padding:0 0 20px 0;}
+.inner_post_rht p a							{ font:14px/18px Georgia, "Times New Roman", Times, serif; color:#d35828; text-decoration:none; display:inline-block;}
+.inner_post_rht p a:hover					{ text-decoration:underline;}
+
+
+.post_mid									{ width:700px; padding:0 0 50px 0;}
+.post_mid_cont								{ width:220px; float:left; border-top:7px solid #7597aa; margin:0 20px 0 0;}
+.post_mid_cont h6							{ font:bold 15px Georgia, "Times New Roman", Times, serif; color:#000000; padding:10px 0 14px 0;}
+.post_mid_cont img							{ float:left; display:block; padding:0 15px 0 0;}
+.post_mid_cont p							{ font:12px/18px Georgia, "Times New Roman", Times, serif; color:#545454; padding:0 0 20px 0;}
+.post_mid_cont p a							{ font:12px/18px Georgia, "Times New Roman", Times, serif; color:#d35828; text-decoration:none; display:inline-block;}
+.post_mid_cont p a:hover					{ text-decoration:underline;}
+.posted_in2									{ width:220px; background:url(images/posted_in_bg.jpg) repeat-x left top; padding:14px 0 0 0;}
+.posted_in2 p								{ font:13px/20px Georgia, "Times New Roman", Times, serif; color:#858585;}
+.posted_in2 p a								{ font:13px Georgia, "Times New Roman", Times, serif; color:#dfa135 !important; text-decoration:none; display:inline-block;}
+.posted_in2 p a:hover						{ text-decoration:underline;}
+
+
+.post_btm									{ width:700px; padding:0 0 65px 0;}
+.catagories									{ width:220px; float:left; margin:0 16px 0 0;}
+.catagories h5								{ font:bold 16px/30px Georgia, "Times New Roman", Times, serif; color:#000; border-bottom:5px solid #ddd2c2;}
+.catagories ul								{ width:220px; float:left; display:block; padding:12px 0 0 0;}
+.catagories ul li							{ display:block; border-bottom:1px solid #ece5da; padding:0 8px;}
+.catagories ul li a							{ font:bold 14px/24px Georgia, "Times New Roman", Times, serif; color:#d35828; text-decoration:none; display:block; background:url(images/catagories_bullet.jpg) no-repeat left 8px; padding:0 0 0 12px;}
+.catagories ul li a:hover					{ text-decoration:underline;}
+
+.about_web									{ width:458px; float:right;}
+.about_web h5								{ font:bold 16px/30px Georgia, "Times New Roman", Times, serif; color:#000; border-bottom:5px solid #ddd2c2;}
+.about_web ul								{ width:458px; float:left; display:block;}
+.about_web ul li							{ display:block; border-bottom:1px solid #ece5da; padding:15px 0;}
+.about_web ul li p							{ font:14px Georgia, "Times New Roman", Times, serif; color:#545454;}
+.about_web ul li p span						{ font:14px Georgia, "Times New Roman", Times, serif; color:#d35828; display:inline-block;}
+.about_web ul li p a						{ font:14px Georgia, "Times New Roman", Times, serif; color:#7597aa; display:inline-block; text-decoration:none;}
+.about_web ul li p a:hover					{ text-decoration:underline;}
+.about_web  a						{ font:14px Georgia, "Times New Roman", Times, serif; color:#7597aa; display:inline-block; text-decoration:none;}
+
+
+
+
+
+
+
+h3.widget-title { display:none; }
+
+
+
+.tagcloud a    	{ font:italic  0px Georgia, "Times New Roman", Times, serif; color:#dfa135;}
+#menu-item-68								{ padding:0 0 0 20px !important; background:none !important;}
+
+
+.inner_post_lft a { text-decoration:none; }
+
+#wpadminbar { display:none; }
+
