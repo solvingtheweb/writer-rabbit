@@ -8,7 +8,7 @@
  */
 ?>
 
-	<aside>
+	<aside class="right">
 		<ul>
 
 <?php

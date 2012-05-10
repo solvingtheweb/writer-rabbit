@@ -8,20 +8,14 @@
  */
 ?>
 
-	<footer>
+	<footer class="clearboth">
 
 <?php
 	get_sidebar( 'footer' );
 ?>
 
 		<a href="<?php echo home_url( '/' ) ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-			<?php bloginfo( 'name' ); ?>
-		</a>
-
-		<?php do_action( 'starkers_credits' ); ?>
-		
-		<a href="<?php echo esc_url( __('http://wordpress.org/', 'starkers') ); ?>" title="<?php esc_attr_e('Semantic Personal Publishing Platform', 'starkers'); ?>" rel="generator"> 
-			<?php printf( __('Proudly powered by %s.', 'starkers'), 'WordPress' ); ?>
+			&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>
 		</a>
 
 	</footer>
@@ -34,5 +28,8 @@
 
 	wp_footer();
 ?>
+</div><!-- End #innerWrapper -->
+</div><!-- End #wrapper -->
+
 </body>
 </html>
