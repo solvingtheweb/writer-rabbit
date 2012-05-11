@@ -8,21 +8,27 @@
  */
 ?>
 
+<div id="main" class="left">
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-
-		<nav>
-			<?php previous_post_link( '%link', '' . _x( '&larr;', 'Previous post link', 'starkers' ) . ' %title' ); ?>
-			<?php next_post_link( '%link', '%title ' . _x( '&rarr;', 'Next post link', 'starkers' ) . '' ); ?>
-		</nav>
 		
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			
+			<?php if ( has_post_thumbnail() ) { /* loads the post's featured thumbnail, requires Wordpress 3.0+ */ echo '<div class="featured-thumbnail">'; the_post_thumbnail(); echo '</div>'; } ?>
+			
+			<?php the_category(); ?>
+
+			<?php if (get_comments_number() > 0) : ?>
+					<div class="comment-count left">
+							<?php comments_popup_link('','1', '%'); ?>
+					</div>
+			<?php endif; ?>
+
 			<header>
 				<h1><?php the_title(); ?></h1>
 
 				<?php starkers_posted_on(); ?>
 			</header>
-			<?php if ( has_post_thumbnail() ) { /* loads the post's featured thumbnail, requires Wordpress 3.0+ */ echo '<div class="featured-thumbnail">'; the_post_thumbnail(); echo '</div>'; } ?>
+			
 			<?php the_content(); ?>
 					
 			<?php wp_link_pages( array( 'before' => '<nav>' . __( 'Pages:', 'starkers' ), 'after' => '</nav>' ) ); ?>
@@ -35,19 +41,10 @@
 						<?php printf( __( 'View all posts by %s &rarr;', 'starkers' ), get_the_author() ); ?>
 					</a>
 			<?php endif; ?>
-			
-			<footer>
-				<?php starkers_posted_in(); ?>
-				<?php edit_post_link( __( 'Edit', 'starkers' ), '', '' ); ?>
-			</footer>
 				
 		</article>
-
-		<nav>
-			<?php previous_post_link( '%link', '' . _x( '&larr;', 'Previous post link', 'starkers' ) . ' %title' ); ?>
-			<?php next_post_link( '%link', '%title ' . _x( '&rarr;', 'Next post link', 'starkers' ) . '' ); ?>
-		</nav>
 
 		<?php comments_template( '', true ); ?>
 
 <?php endwhile; // end of the loop. ?>
+</div><!-- end #main -->
