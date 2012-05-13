@@ -106,7 +106,7 @@
                 <?php wp_link_pages( array( 'before' => '<nav>' . __( 'Pages:', 'starkers' ), 'after' => '</nav>' ) ); ?>
     <?php endif; ?>
      
-            <footer>
+            <footer class="post_footer">
  
                 <?php if ( count( get_the_category() ) ) : ?>
                         <?php printf( __( 'Posted in %2$s', 'starkers' ), 'entry-utility-prep entry-utility-prep-cat-links', get_the_category_list( ', ' ) ); ?> |

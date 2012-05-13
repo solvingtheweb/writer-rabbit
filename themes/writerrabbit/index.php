@@ -21,7 +21,7 @@ get_header(); ?>
 							<?php comments_popup_link('','1', '%'); ?>
 					</div>
 					<?php endif; ?>
-					<h1><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+					<h2><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 					<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="bookmark">
 						<?php if ( has_post_thumbnail() ) { /* loades the post's featured thumbnail, requires Wordpress 3.0+ */ echo '<div class="excerpt-thumbnail">'; the_post_thumbnail('thumbnail'); echo '</div>'; } ?></a>
 					<?php the_excerpt(); ?>
@@ -42,7 +42,7 @@ get_header(); ?>
 							<?php comments_popup_link('','1', '%'); ?>
 					</div>
 					<?php endif; ?>
-					<h1><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+					<h2><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 					<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="bookmark">
 						<?php if ( has_post_thumbnail() ) { /* loades the post's featured thumbnail, requires Wordpress 3.0+ */ echo '<div class="excerpt-thumbnail">'; the_post_thumbnail('thumbnail'); echo '</div>'; } ?></a>
 

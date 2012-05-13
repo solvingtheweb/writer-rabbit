@@ -9,6 +9,7 @@
 
 get_header(); ?>
 
+<div id="main" class="left">
 		<h1><?php
 			printf( __( 'Tag Archives: %s', 'starkers' ), '' . single_tag_title( '', false ) . '' );
 		?></h1>
@@ -16,6 +17,8 @@ get_header(); ?>
 <?php
  get_template_part( 'loop', 'tag' );
 ?>
+
+</div><!-- end #main -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

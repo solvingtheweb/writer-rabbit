@@ -8,7 +8,7 @@
  */
 ?>
 
-	<footer class="clearboth">
+	<footer id="siteFooter" class="clearboth">
 
 <?php
 	get_sidebar( 'footer' );
