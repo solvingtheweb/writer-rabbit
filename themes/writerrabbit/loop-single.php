@@ -30,7 +30,9 @@
 			</header>
 			
 			<?php the_content(); ?>
-			
+
+			<?php get_ssb($order = array('googleplus' => 3, 'fblike' => 1, 'twitter' => 2)); ?>
+
 			<div class="clearboth"></div>
 		</article>
 

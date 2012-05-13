@@ -283,6 +283,7 @@ article {
 	border-top: solid 7px #7597aa;
 	padding: 20px 0;
 	margin-right: 20px;
+	border-bottom:solid 1px #e7e2e0;
 }
 
 .featured-thumbnail img { 
