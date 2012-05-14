@@ -10,7 +10,7 @@
  
 <?php /* Display navigation to next/previous pages when applicable */ ?>
 <?php if ( $wp_query->max_num_pages > 1 ) : ?>
-    <nav>
+    <nav class="prev_next">
         <?php next_posts_link( __( '&larr; Older posts', 'starkers' ) ); ?>
         <?php previous_posts_link( __( 'Newer posts &rarr;', 'starkers' ) ); ?>
     </nav>
@@ -91,11 +91,15 @@
     <?php else : ?>
      
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-         
+            
+            <?php if (get_comments_number() > 0) : ?>
+                    <div class="comment-count left">
+                            <?php comments_popup_link('','1', '%'); ?>
+                    </div>
+            <?php endif; ?>
+            
 			<header>
                 <h2><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'starkers' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
- 
-                <?php starkers_posted_on(); ?>
             </header>
  
     <?php if ( is_archive() || is_search() ) : // Only display excerpts for archives and search. ?>
@@ -131,7 +135,7 @@
  
 <?php /* Display navigation to next/previous pages when applicable */ ?>
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>
-    <nav>
+    <nav class="prev_next">
         <?php next_posts_link( __( '&larr; Older posts', 'starkers' ) ); ?>
         <?php previous_posts_link( __( 'Newer posts &rarr;', 'starkers' ) ); ?>
     </nav>

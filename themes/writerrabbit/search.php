@@ -9,6 +9,7 @@
 
 get_header(); ?>
 
+<div id="main" class="left">
 <?php if ( have_posts() ) : ?>
 		<h1><?php printf( __( 'Search Results for: %s', 'starkers' ), '' . get_search_query() . '' ); ?></h1>
 			<?php
@@ -19,6 +20,7 @@ get_header(); ?>
 			<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'starkers' ); ?></p>
 			<?php get_search_form(); ?>
 <?php endif; ?>
+</div><!-- end #main -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

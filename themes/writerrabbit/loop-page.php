@@ -8,6 +8,7 @@
  */
 ?>
 
+<div id="main" class="left">
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -28,6 +29,5 @@
 			</footer>
 		</article>
 
-				<?php comments_template( '', true ); ?>
-
 <?php endwhile; ?>
+</div><!-- end #main -->

@@ -71,7 +71,6 @@ h1 {
 	font-family: Times, "Times New Roman", Georgia, serif;
 	font-size: 18px;
 	font-weight: bold;
-	text-transform: uppercase;
 	color: #8F8F8F;
 }
 
@@ -152,7 +151,7 @@ General Styles
 .comment-count {
 	background:url('images/comment_count_bg.png') no-repeat;
 	width: 30px;
-	padding: 1px 0 2px 23px;
+	padding: 0 0 2px 23px;
 	margin-top: 1px;
 }
 
@@ -291,7 +290,9 @@ article {
 	margin:0 15px 15px 0;
 }
 
-.post-categories li { list-style:none;}
+ul.post-categories {margin-left:0;}
+
+.post-categories li { list-style:none; margin-bottom: 3px;}
 
 .post-categories li a {
 	font-family: Times, "Times New Roman", Georgia, serif;
@@ -300,6 +301,13 @@ article {
 	text-transform:uppercase;
 	color:#8f8f8f;
 }
+
+
+/********************************
+Archive Pages
+********************************/
+
+.prev_next { margin: 10px 0;}
 
 /********************************
 Sidebar
@@ -313,10 +321,19 @@ aside .tagcloud a {padding: 1px;}
 
 aside .blogroll {margin: 15px 10px;}
 
+/********************************
+Disqus
+********************************/
 
+#disqus_thread { width:700px;}
+
+.dsq-comment-header {
+	border-radius:0 !important;
+	border:none !important;
+}
 
 /********************************
-Search
+Search Form
 ********************************/
 
 #searchFormOuter {

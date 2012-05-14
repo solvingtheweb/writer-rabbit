@@ -9,8 +9,8 @@
 
 get_header(); ?>
 
-	<h1><?php _e( 'Not Found', 'starkers' ); ?></h1>
-		<p><?php _e( 'Apologies, but the page you requested could not be found. Perhaps searching will help.', 'starkers' ); ?></p>
+	<h1><?php _e( 'Page Not Found', 'starkers' ); ?></h1>
+		<p><?php _e( "Apologies, but it seems you've wandered down the wrong rabbit hole. Perhaps searching will help?", 'starkers' ); ?></p>
 		<?php get_search_form(); ?>
 
 	<script type="text/javascript">
